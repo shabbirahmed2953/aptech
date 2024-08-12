@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            margin: 0;
+        }
+
+        .nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item a:hover {
+            background-color: #575757;
+        }
+
+        .s {
+            width: 100%;
+
+        }
+
+        .heading {
+            color: rgb(255, 255, 255);
+            position: fixed;
+            top: 20%;
+            margin-left: 20px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid white; */
+            border-radius: 5px;
+            padding: 8px;
+            /* background-color: #000000; */
+        }
+
+        .main {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-item"><a href="home.html">Home</a></div>
+        <div class="nav-item"><a href="about.html">About</a></div>
+        <div class="nav-item"><a href="services.html">Services</a></div>
+        <div class="nav-item"><a href="contact.html">Contact</a></div>
+
+    </div>
+    <img class="s" src="contact.jpg" alt="">
+
+    </div>
+    <div class="main"
+        style="width: 300px; height: 400px;border: 1px solid white;border-radius: 9px;justify-content: center;align-items: center;position: fixed;top: 15%;margin-left: 35%;box-shadow: 0 0 5px 3px white;">
+        <div class="input">
+            <h1 class="input" style="color: white;">contact us</h1>
+        </div>
+        <form>
+            <div class="input"><input type="text" placeholder="Enter name"
+                    style="padding: 10px; background-color: #000000;border: 0 0 1px solid wheat; border-radius: 4px; color: white;"
+                    id="name"></div>
+            <div class="input"><input type="text" placeholder="email"
+                    style="padding: 10px;  background-color: #000000;border: 0 0 1px solid wheat; border-radius: 4px; color: white;"
+                    id="email"></div>
+            <div class="input"><input type="button" value="submit"
+                    style="padding: 10px; background-color: #000000;border: 0 0 1px solid wheat; border-radius: 4px; color: white;">
+            </div>
+        </form>
+        <script>
+            var nameregex = ^ /[ a-zA-Z /s]+/$
+            var emailregex = ^ /[ [^\s@]+@[^\s@]\.[[^\s@]]]+/$
+
+
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+
+            if (name === '') {
+                alert('please enter your name')
+            } else if (!nameregex.text(name)) {
+                alert('please enter sahi name (only letter and spaces)')
+            }
+            else if (email === '') {
+                alert('please enter your email')
+            } else if (!emailregex.text(email)){
+                alert('please enter sahi email')
+            } else{
+                alert('foam submitted successfully')
+            }
+
+
+
+
+
+
+
+        </script>
+
+
+    </div>
+</body>
+
+</html>
